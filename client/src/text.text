@@ -1,0 +1,155 @@
+Create a complete, working prototype of a real-time computer vision game called **"Face & Fury: Neural Arena"**.
+
+## 🧠 Core Concept
+
+The player controls the game using only their **hand gestures and facial expressions** through a webcam. No keyboard or mouse controls during gameplay.
+
+---
+
+## ⚙️ Technical Requirements
+
+* Language: Python
+* Game Engine: Use a simple framework like Pygame (or Unity if using C# instead)
+* Computer Vision:
+
+  * Use MediaPipe for hand tracking and face mesh
+  * Use OpenCV for camera input and processing
+* Optional AI:
+
+  * Use TensorFlow or PyTorch for emotion classification (or simple rule-based expressions for prototype)
+
+---
+
+## 🎮 Gameplay Mechanics
+
+### ✋ Hand Gesture Controls
+
+Detect and map these gestures:
+
+* Open palm → Shield
+* Closed fist → Attack
+* Two fingers → Shoot projectile
+* Swipe left/right → Dash movement
+* Raise hand → Launch attack
+
+### 😐 Face Expression Controls
+
+Detect these expressions:
+
+* Angry → Power boost (increase damage)
+* Surprise → Slow motion (reduce enemy speed)
+* Wink → Teleport
+* Neutral calm → Energy regeneration
+* Looking left/right → Aim direction
+
+---
+
+## 🎯 Game Features
+
+### 1. Main Mode: Duel Arena
+
+* Player vs AI enemy
+* Enemy moves toward player and attacks
+* Player uses gestures and expressions to fight
+
+### 2. Health & Energy System
+
+* Player and enemy have health bars
+* Energy is consumed for special abilities
+* Regenerates slowly or via calm face
+
+### 3. Enemy AI
+
+* Simple behavior:
+
+  * Move toward player
+  * Attack at intervals
+  * React to player position
+* Intermediate:
+
+  * Track player patterns (most used moves)
+  * Counter repetitive actions
+
+---
+
+## 🖥️ UI Requirements
+
+* Show webcam feed in a corner
+* Display:
+
+  * Player health
+  * Enemy health
+  * Current detected gesture
+  * Current detected emotion
+* Add visual feedback (e.g., “POWER BOOST ACTIVE”)
+
+---
+
+## 🎨 Visual Effects
+
+* Basic particle effects for attacks
+* Screen tint for slow motion
+* Glow effect for power boost
+* Smooth animations for player and enemy
+
+---
+
+## 🧪 Detection Logic
+
+### Hand Detection:
+
+* Use MediaPipe Hands landmarks
+* Classify gestures based on finger positions
+
+### Face Detection:
+
+* Use MediaPipe Face Mesh
+* Detect:
+
+  * Eye openness (for blink/wink)
+  * Mouth openness (for surprise)
+  * Eyebrow/eye tension (for anger approximation)
+
+---
+
+## 🔁 Game Loop
+
+* Capture webcam frame
+* Process hand + face detection
+* Map gestures → actions
+* Update game state
+* Render game scene
+* Repeat in real time
+
+---
+
+## 🚀 Output Requirements
+
+* Provide full working code (well-structured)
+* Include comments explaining key parts
+* Include setup instructions:
+
+  * Required libraries
+  * How to run the game
+* Optimize for real-time performance
+
+---
+
+## 🧩 Bonus Features (if possible)
+
+* Add sound effects
+* Add combo system (gesture + expression combos)
+* Add replay system (record player session)
+* Add difficulty scaling
+
+---
+
+## 🎯 Goal
+
+The final result should be a playable prototype where a user can:
+
+* Sit in front of a webcam
+* Use ONLY their face and hands
+* Control a character and fight an AI enemy in real time
+
+Focus on making it WORK first, then make it smooth and visually appealing.

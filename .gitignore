@@ -1,0 +1,22 @@
+# Dependencies
+client/node_modules/
+node_modules/
+
+# Production/Build
+client/dist/
+dist/
+
+# Configuration & Secrets
+server/config/db_config.php*
+server/config/keys.php
+.env
+.env.local
+.env.production
+.env.development
+
+# System files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
